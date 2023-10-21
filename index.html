@@ -6,13 +6,17 @@
     - Include a way to get entities from the API.
     - Use Bootstrap and CSS to style your project. 
 -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Stocker App: for keeping stock of things-->
         <title>Stocker App</title>
+        <!--Bootstrap-->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <!--Imported Google font-->
         <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">        
         <style>
             body {
@@ -51,21 +55,28 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 100%; /* Adjust this value as needed */
-                height: 100%; /* This ensures vertical centering */
+                width: 100%;
+                height: 100%;
     }
     </style>
     </head>
     <body class="container">
         <h1>Stocker App</h1>
+
+        <!-- Form for input of new items -->
         <div id="new-item" class="jumbotron">
             <h2>New Item</h2>
-            <input type="text" id="new-item-name" class="form-control" placeholder="Item Name">
-            <input type="number" id="new-item-price" class="form-control" placeholder="Item Price">
+            <input type="text" id="new-item-name" class="form-control" placeholder="Item Name"> <!--Item name-->
+            <input type="number" id="new-item-price" class="form-control" placeholder="Item Price"> <!--Item price-->
             <br>
+            <!-- Creates a new item -->
             <button id="create-new-item" class="btn btn-primary form-control">Create Item</button>
         </div>
-        <div id="app"></div>
+
+        <!-- List section of app below the input form -->
+        <div id="app">
+            <!-- Items that are in stock will appear here -->
+        </div>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="index.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
