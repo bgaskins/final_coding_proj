@@ -116,11 +116,10 @@ class DOMManager {
                 <div id="${item._id}" class="card my-2" style="background-color: #ffffff; border: none; width: 50%; margin-left: 5em;">
                     <div class="card-body d-flex align-items-center">
                         <div class="col-md-6">
-                            <h3 class="card-title text-left">${item.itemName}</h3> {`/* Item Name*/`}
-                            <h6 class="card-subtitle text-muted text-left">$${item.price}</h6> {`/* Item price in USD */`}
+                            <h3 class="card-title text-left">${item.itemName}</h3>
+                            <h6 class="card-subtitle text-muted text-left">$${item.price}</h6> 
                         </div>
                         <div class="col-md-6">
-                            {`/* Delete and Edit item buttons */`}
                             <div class="btn-group" style="margin-left: 10px;">
                                 <button class="btn btn-sm btn-danger" onclick="DOMManager.deleteItem('${item.id}')">Delete</button>
                                 <button class="btn btn-sm btn-primary" onclick="DOMManager.editItem('${item.id}')">Edit</button>
