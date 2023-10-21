@@ -102,14 +102,21 @@ class DOMManager {
         } else {
             for (let item of items) {
                 $('#app').prepend(`
-                    <div id="${item._id}" class="card">
-                        <div class="card-header">
-                            <h3>${item.itemName}</h3>
-                            <h6>$${item.price}</h6>
-                            <button class="btn btn-danger" onclick="DOMManager.deleteItem('${item.id}')">Delete</button>
-                            <button class="btn btn-primary" onclick="DOMManager.editItem('${item.id}')">Edit</button>
+                <div id="${item._id}" class="card my-2" style="background-color: #ffffff; border: none; width: 50%; margin-left: 5em;">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="col-md-6">
+                            <h3 class="card-title text-left">${item.itemName}</h3>
+                            <h6 class="card-subtitle text-muted text-left">$${item.price}</h6>
                         </div>
-                    </div>`
+                        <div class="col-md-6">
+                            <div class="btn-group" style="margin-left: 10px;">
+                                <button class="btn btn-sm btn-danger" onclick="DOMManager.deleteItem('${item.id}')">Delete</button>
+                                <button class="btn btn-sm btn-primary" onclick="DOMManager.editItem('${item.id}')">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
                 );
             }
         }
